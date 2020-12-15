@@ -1,0 +1,163 @@
+{% load static %}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+<!--doctype html--->
+<html>
+	<head>
+		<link rel="stylesheet"  href="{%  static  'css/style.css'  %}">
+
+	</head>
+	<body>
+		<header class="header" >
+			<div class= "container">
+				<div class="name" >
+				<h2 id="topname">Online Crime Reporting System</h2>
+				</div>
+				<div class="nav">
+					<ul class="navitem">
+						<li> <a href="/homepage">Home </a> </li>
+						<li> <a href="About.html">About</a> </li>
+						{% if user.is_authenticated %}
+						<li>
+							<form class="logout-link" action="/logout" method="post">
+								{% csrf_token %}
+								<button type="submit">Logout</button>
+							</form>
+						</li>
+						<li><a href="/add" class="highlight">AddCrime</a> </li>
+						{% else %}
+						<li><a href="/login">Login</a> </li>
+						<li> <a href="/signup">Signup</a> </li>
+						{% endif %}
+						<li> <a href="/crimelist">CrimeLists</a> </li>
+						<li><a href="#"> Contact us</a> </li>
+					</ul>
+				</div>
+			</div>
+
+
+
+
+
+			<br>
+			<br>
+
+			<h1>This are the crimes:</h1>
+			<div class="crimes">
+				{% for crime in cl %}
+				<div class="crime">
+					<h2><a href="#">{{ crime.crimename }}</a></h2>
+					<p>{{ crime.cdes }}</p>
+					<p>{{ crime.date }}</p>
+				</div>
+				{% endfor %}
+			</div>
+			<br>
+
+			</header>
+
+		<section>
+<br>
+			<br>
+			<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</section>
+
+
+
+
+	<section style= "background-color:#bb4e4e" >
+			<div class="section3container">
+					<div class="contactinfo">
+					<h2> Contact info </h2>
+				<i class="fas fa-home"></i><span> Adress no: XXXX street</Span> <br><br><br>
+				<i class="fas fa-city"></i><span> Dhaka,Bangladash</Span> <br><br><br>
+				<i class="fas fa-mobile-alt"></i><span> 01777219885</Span> <br><br><br>
+				<i class="fas fa-phone"></i><span> (123)456-651</Span><br><br><br>
+				<i class="fas fa-envelope"></i><span> raufuzzaman8350@gmail.com</Span><br>
+				</div>
+				<div class="mudules">
+					<h2> mudules </h2>
+				<i class="fas fa-greater-than"></i> <a href="#"> Criminal Mudule </a> <hr> <br>
+				<i class="fas fa-greater-than"></i><a href="#"> User Mudule </a><hr><br>
+				<i class="fas fa-greater-than"></i><a href="#"> Student Mudule </a><hr><br>
+				<i class="fas fa-greater-than"></i><a href="#"> Login Mudule </a><hr><br>
+				<i class="fas fa-greater-than"></i><a href="#"> Crime Mudule </a><hr><br>
+				</div>
+
+				<div class="projectlinks">
+					<h2> Projectlinks </h2>
+				<i class="fas fa-greater-than"></i><a href="#"> Home  </a> <hr> <br>
+				<i class="fas fa-greater-than"></i><a href="#"> About us </a> <hr> <br>
+				<i class="fas fa-greater-than"></i><a href="#"> Contacts </a> <hr> <br>
+				<i class="fas fa-greater-than"></i><a href="#"> Login </a> <hr> <br>
+				<i class="fas fa-greater-than"></i><a href="#"> Email us </a> <hr> <br>
+				</div>
+				<div class="aboutproject">
+				<h2> about project </h2>
+
+				<p> The sis can include featurs that can be considered
+				as an enterprise resource planning ERP system for a corporate costomer.
+				As such, many of issues with ERP system selection methodology,implementation and
+				operation of a EPR system apply too
+
+				</p>
+
+				</div>
+
+
+			</div>
+		<script src="https://kit.fontawesome.com/f3e615ab0d.js" crossorigin="anonymous"></script>
+		</section>
+
+	<footer style="background-color:#5d0e0e;">
+
+	 <div class=" footer">
+	 <i class="far fa-copyright"></i> <span>copyright Peace officer's </span>
+
+
+	</div>
+
+
+	</footer>
+	</body>
+
+</html>
+
+

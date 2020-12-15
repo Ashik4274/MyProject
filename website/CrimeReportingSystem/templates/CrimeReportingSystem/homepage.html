@@ -1,0 +1,235 @@
+{% load static %}
+
+<!--doctype html--->
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<html>
+	<head>
+		<title> Home </title>
+		<link rel="stylesheet"  href="{%  static  'css/style.css'  %}">
+
+
+	</head>
+	<body>
+
+
+		<header class="header" >
+			<div class= "container">
+				<div class="name" >
+				<h2 id="topname">Online Crime Reporting System</h2>
+				</div>
+				<div class="nav">
+					<ul class="navitem">
+						<li> <a href="/homepage">Home </a> </li>
+						<li> <a href="About.html">About</a> </li>
+						{% if user.is_authenticated %}
+						<li>
+							<form class="logout-link" action="/logout" method="post">
+								{% csrf_token %}
+								<button type="submit">Logout</button>
+							</form>
+						</li>
+						<li><a href="/add" class="highlight">AddCrime</a> </li>
+						{% else %}
+						<li><a href="/login">Login</a> </li>
+						<li> <a href="/signup">Signup</a> </li>
+						{% endif %}
+						<li> <a href="/crimelist">CrimeLists</a> </li>
+						<li><a href="#"> Contact us</a> </li>
+					</ul>
+				</div>
+			</div>
+
+			</header>
+
+
+			<section>
+				<br>
+				<br>
+
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+
+  <img src="{% static 'images/crime reporting.jpg' %}" style="width:100% ">
+  <div class="text"> <h2> online <br>crime reporting <br>system </h2>
+					<p> a complete soluation <br> for loggin complain </p>
+
+					<button> Read more </button>
+
+  </div>
+</div>
+
+<div class="mySlides fade">
+  <img src="{% static 'images/crimescene1.jpg' %}" style="width:100%">
+  <div class="text"> <h2> criminal records and <br>cases<br> management </h2>
+					<p> management of <br> criminal and  cases </p>
+					<button> Read more </button>
+
+  </div>
+</div>
+
+<div class="mySlides fade">
+  <img src="{% static 'images/crime reporting31.jpg' %}" style="width:100%">
+  <div class="text"> <h2> user and <br> employee <br>management </h2>
+					<p> management users,employees <br> and criminals <br> on a single portal </p>
+					<button> Read more </button>
+
+
+
+
+  </div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+
+			</section>
+		<section>
+
+
+			<h2 id="heading"> Welcome to online crime reporting system </h2>
+
+
+				<div class="imagebox">
+						<div class="fristimg">
+						 <img src="{% static 'images/download (1).jpg' %}">
+							<h3>Criminal Management System</h3>
+							<p>	An crime website is a website that deals specifically with
+								crime or careers. Many crime websites are designed to
+								allow ernployers to job requirernents for a position
+							</p>
+						</div>
+						<div class="secondimg">
+						 <img src="{% static 'images/download.jpg' %}">
+							<h3>Cases Management System</h3>
+							<p>
+							An crime website is a website that deals specifically with
+							crirne or careers. Many crime websites are to
+							allow employers to post job requirements for a position
+							</p>
+						</div>
+
+						<div class="thirdimg">
+				 <img src="{% static 'images/download(3).jpg' %}">
+							<h3>Crimes Management System</h3>
+							<p>
+							An crime website is a website that deals specifically with
+							crirne or careers. Many crime websites are to
+							allow employers to post job requirements for a position
+							</p>
+
+
+
+						</div>
+				</div>
+				<div class="aboutbox">
+						<div class="aboutboximage">
+						<img src="{% static 'images/Capture.PNG' %}">
+
+						</div>
+						<div class="aboutboxpera">
+
+							<h3>	ABOUT ONLINE CRIME REPORTING SYSTEM </h3>
+							<p>An crime website is a website that deals specifically with crime or careers. Many crirne
+								websites are designed to allow employers to position job requirements for a position to be filled
+								and are commonly known as job boards. Other crime sites offer employer reviews, career
+								and Job search advice and describe ditterent job descriptions or emplyees. Through a job
+								website a prospective employee can locate and h out a job application or subm it resumes
+								over the internet for the advertised position. The Online Career Center was developed as a
+								non-profit or organization backed by forty major corporations to allow job hunters to
+								their resumes and for recruiters to post job openings. In 1994 Robert J. McGovern began
+								NetStart as software sold to companies for listing job 0'xnings on their websites and
+								manage the incoming e-mails those listings generated.<p>
+						</div>
+				</div>
+
+		</section>
+
+		<section style= "background-color:#bb4e4e" >
+			<div class="section3container">
+				<div class="contactinfo">
+					<h2> Contact info </h2>
+				<i class="fas fa-home"></i><span> Adress no: XXXX street</Span> <br><br><br>
+				<i class="fas fa-city"></i><span> Dhaka,Bangladash</Span> <br><br><br>
+				<i class="fas fa-mobile-alt"></i><span> 01777219885</Span> <br><br><br>
+				<i class="fas fa-phone"></i><span> (123)456-651</Span><br><br><br>
+				<i class="fas fa-envelope"></i><span> raufuzzaman8350@gmail.com</Span><br>
+				</div>
+				<div class="mudules">
+					<h2> mudules </h2>
+				<i class="fas fa-greater-than"></i> <a href="#"> Criminal Mudule </a> <hr> <br>
+				<i class="fas fa-greater-than"></i><a href="#"> User Mudule </a><hr><br>
+				<i class="fas fa-greater-than"></i><a href="#"> Student Mudule </a><hr><br>
+				<i class="fas fa-greater-than"></i><a href="#"> Login Mudule </a><hr><br>
+				<i class="fas fa-greater-than"></i><a href="#"> Crime Mudule </a><hr><br>
+				</div>
+
+				<div class="projectlinks">
+					<h2> Projectlinks </h2>
+				<i class="fas fa-greater-than"></i><a href="#"> Home  </a> <hr> <br>
+				<i class="fas fa-greater-than"></i><a href="#"> About us </a> <hr> <br>
+				<i class="fas fa-greater-than"></i><a href="#"> Contacts </a> <hr> <br>
+				<i class="fas fa-greater-than"></i><a href="#"> Login </a> <hr> <br>
+				<i class="fas fa-greater-than"></i><a href="#"> Email us </a> <hr> <br>
+				</div>
+				<div class="aboutproject">
+				<h2> about project </h2>
+
+				<p> The sis can include featurs that can be considered
+				as an enterprise resource planning ERP system for a corporate costomer.
+				As such, many of issues with ERP system selection methodology,implementation and
+				operation of a EPR system apply too
+
+				</p>
+
+				</div>
+
+
+			</div>
+		</section>
+
+	<footer style="background-color:#5d0e0e;">
+
+	 <div class=" footer">
+	 <i class="far fa-copyright"></i> <span>copyright Peace officer's </span>
+	 </div>
+	</footer>
+
+	</body>
+
+
+
+
+
+</html>
