@@ -10,4 +10,5 @@ urlpatterns = [
     path('add', views.Add_create_view, name='add'),
     path('<int:crime_id>/', views.Detail, name='detail-page'),
     path('homepage', views.homepage, name='homepage'),
+    path('About', views.homepage, name='About'),
 ]

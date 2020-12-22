@@ -10,6 +10,10 @@ def homepage(request):
     return render(request, 'CrimeReportingSystem/homepage.html')
 
 
+def about(request):
+    return render(request, 'CrimeReportingSystem/About.html')
+
+
 def Crimes(request):
     cl = Crimelist.objects.all().order_by('date')
     return render(request, 'CrimeReportingSystem/crimelist.html', {'cl': cl})

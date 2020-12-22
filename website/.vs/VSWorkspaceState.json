@@ -1,6 +1,13 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\accounts",
+    "\\accounts\\templates",
+    "\\accounts\\templates\\accounts",
+    "\\CrimeReportingSystem",
+    "\\CrimeReportingSystem\\static",
+    "\\CrimeReportingSystem\\static\\css"
   ],
+  "SelectedNode": "\\accounts\\templates\\accounts\\login.html",
   "PreviewInSolutionExplorer": false
 }

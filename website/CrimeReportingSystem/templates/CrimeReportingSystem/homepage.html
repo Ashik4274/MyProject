@@ -21,7 +21,9 @@
 				<div class="nav">
 					<ul class="navitem">
 						<li> <a href="/homepage">Home </a> </li>
-						<li> <a href="About.html">About</a> </li>
+						<li> <a href="/About">About</a> </li>
+						<li> <a href="/crimelist">CrimeLists</a> </li>
+						<li><a href="#"> Contact us</a> </li>
 						{% if user.is_authenticated %}
 						<li>
 							<form class="logout-link" action="/logout" method="post">
@@ -34,8 +36,7 @@
 						<li><a href="/login">Login</a> </li>
 						<li> <a href="/signup">Signup</a> </li>
 						{% endif %}
-						<li> <a href="/crimelist">CrimeLists</a> </li>
-						<li><a href="#"> Contact us</a> </li>
+
 					</ul>
 				</div>
 			</div>
